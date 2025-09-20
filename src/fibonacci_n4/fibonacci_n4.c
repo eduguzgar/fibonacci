@@ -47,6 +47,10 @@ void fibonacci(int n, long long *arr) {
 
 void print_fibonacci(int n, long long *arr)
 {
+    if (n == 0) {
+        return;
+    }
+
     int i;
     for(i = 0; i < n - 1; ++i)
     {
