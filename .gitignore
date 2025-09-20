@@ -1,0 +1,11 @@
+# Ignorar binarios compilados
+/bin/
+/bin/*
+
+# Archivos temporales de compilación
+*.o
+*.out
+*.exe
+
+# Archivos de depuración
+*.log
