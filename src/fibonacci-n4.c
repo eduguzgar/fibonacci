@@ -60,18 +60,18 @@ int main() {
     int n;
     long long *arr;
 
-    puts("How many numbers do you want (N)?");
+    printf("How many numbers do you want (N)?\n");
     scanf("%d", &n);
 
     if (n < 0) {
-        fputs("Error: Negative numbers are invalid.", stderr);
+        fprintf(stderr, "Error: negative numbers are invalid %d\n", n);
         return 1;
     }
 
-    arr = (long long*)malloc((size_t)n * sizeof(long long));
+    arr = (long long *)malloc(n * sizeof(long long));
 
     if (!arr) {
-        fputs("Error: malloc array.", stderr);
+        fprintf(stderr, "Error: malloc array\n");
         return 1;
     }
 
