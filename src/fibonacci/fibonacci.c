@@ -1,7 +1,8 @@
+#include "fibonacci.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-void fibonacci(int n, long long *arr) {
+void fibonacci(size_t n, long long *arr) {
     if (n == 0) {
         return;
     }
@@ -13,18 +14,18 @@ void fibonacci(int n, long long *arr) {
         arr[1] = 1;
     }
 
-    for (int i = 2; i < n; ++i) {
+    for (size_t i = 2; i < n; ++i) {
         arr[i] = arr[i - 1] + arr[i - 2];
     }
 }
 
-void print_fibonacci(int n, long long *arr)
+void print_fibonacci(size_t n, const long long *arr)
 {
     if (n == 0) {
         return;
     }
 
-    int i;
+    size_t i;
     for(i = 0; i < n - 1; ++i)
     {
         printf("%lld, ", arr[i]);

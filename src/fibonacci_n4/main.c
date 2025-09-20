@@ -1,23 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 #include "fibonacci_n4.h"
 
 int main() {
-    int n;
+    size_t n;
     long long *arr;
 
     printf("How many numbers do you want (N)?\n");
-    if (scanf("%d", &n) != 1) {
+    if (scanf("%zu", &n) != 1) {
         fprintf(stderr, "Error: invalid input\n");
         return 1;
     }
 
-    if (n < 0) {
-        fprintf(stderr, "Error: negative numbers are invalid %d\n", n);
-        return 1;
-    }
-
-    arr = (long long *)malloc(n * sizeof(long long));
+    arr = malloc(n * sizeof *arr);
 
     if (!arr) {
         fprintf(stderr, "Error: malloc array\n");

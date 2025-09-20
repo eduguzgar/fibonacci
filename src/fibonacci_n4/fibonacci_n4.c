@@ -1,7 +1,8 @@
+#include "fibonacci_n4.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-void fibonacci(int n, long long *arr) {
+void fibonacci(size_t n, long long *arr) {
     long long a = 0, b = 1;
     long long s1, s2, s3, s4;
 
@@ -16,9 +17,9 @@ void fibonacci(int n, long long *arr) {
         arr[1] = b;
     }
 
-    int idx = 2;
-    int max_blocks = (n - 2) / 4;
-    int i;
+    size_t idx = 2;
+    size_t max_blocks = (n - 2) / 4;
+    size_t i;
     for (i = 0; i < max_blocks; ++i) {
         s1 = a + b;
         s2 = b + s1;
@@ -34,7 +35,7 @@ void fibonacci(int n, long long *arr) {
         b = s4;
     }
 
-    int remaining = (n - 2) % 4;
+    size_t remaining = (n - 2) % 4;
     for (i = 0; i < remaining; ++i) {
         s1 = a + b;
 
@@ -45,13 +46,13 @@ void fibonacci(int n, long long *arr) {
     }
 }
 
-void print_fibonacci(int n, long long *arr)
+void print_fibonacci(size_t n, const long long *arr)
 {
     if (n == 0) {
         return;
     }
 
-    int i;
+    size_t i;
     for(i = 0; i < n - 1; ++i)
     {
         printf("%lld, ", arr[i]);
