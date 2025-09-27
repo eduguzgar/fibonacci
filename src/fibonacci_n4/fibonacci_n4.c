@@ -10,17 +10,19 @@ void fibonacci(size_t n, long long *arr) {
         return;
     }
 
-    if (n >= 1) {
-        arr[0] = a;
+    arr[0] = a;
+    if (n == 1) {
+        return;
     }
-    if (n >= 2) {
-        arr[1] = b;
+
+    arr[1] = b;
+    if (n == 2) {
+        return;
     }
 
     size_t idx = 2;
     size_t max_blocks = (n - 2) / 4;
-    size_t i;
-    for (i = 0; i < max_blocks; ++i) {
+    for (size_t i = 0; i < max_blocks; ++i) {
         s1 = a + b;
         s2 = b + s1;
         s3 = s1 + s2;
@@ -36,11 +38,9 @@ void fibonacci(size_t n, long long *arr) {
     }
 
     size_t remaining = (n - 2) % 4;
-    for (i = 0; i < remaining; ++i) {
+    for (size_t i = 0; i < remaining; ++i) {
         s1 = a + b;
-
         arr[idx++] = s1;
-
         a = b;
         b = s1;
     }
@@ -52,11 +52,9 @@ void print_fibonacci(size_t n, const long long *arr)
         return;
     }
 
-    size_t i;
-    for(i = 0; i < n - 1; ++i)
-    {
+    for (size_t i = 0; i < n - 1; ++i) {
         printf("%lld, ", arr[i]);
     }
 
-    printf("%lld\n", arr[i]);
+    printf("%lld\n", arr[n - 1]);
 }

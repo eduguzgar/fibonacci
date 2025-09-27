@@ -25,11 +25,9 @@ void print_fibonacci(size_t n, const long long *arr)
         return;
     }
 
-    size_t i;
-    for(i = 0; i < n - 1; ++i)
-    {
+    for (size_t i = 0; i < n - 1; ++i) {
         printf("%lld, ", arr[i]);
     }
 
-    printf("%lld\n", arr[i]);
+    printf("%lld\n", arr[n - 1]);
 }
