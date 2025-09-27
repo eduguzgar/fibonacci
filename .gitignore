@@ -1,11 +1,14 @@
-# Ignorar binarios compilados
+# Compiled files
 /bin/
 /bin/*
 
-# Archivos temporales de compilación
+# Compilation temp files
 *.o
 *.out
 *.exe
 
-# Archivos de depuración
+# Log files
 *.log
+
+# VS Code
+.vscode/

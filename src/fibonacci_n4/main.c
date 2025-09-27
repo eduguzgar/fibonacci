@@ -7,7 +7,7 @@
 
 int main(void) {
     long tmp;
-    size_t n = 0;
+    size_t n;
     long long *arr = NULL;
 
     printf("How many numbers do you want (N)?\n");

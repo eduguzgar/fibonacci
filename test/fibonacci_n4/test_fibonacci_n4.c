@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <string.h>
 
-#include "../../src/fibonacci_n4/fibonacci_n4.h"
+#include "fibonacci_n4.h"
 
 // Helpers
 static void expect_array_eq_ll(const long long *got, const long long *exp, size_t n) {
