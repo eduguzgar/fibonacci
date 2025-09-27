@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include "fibonacci_n4.h"
 
-int main(void) {
+int main() {
     long tmp;
     size_t n;
     long long *arr = NULL;
